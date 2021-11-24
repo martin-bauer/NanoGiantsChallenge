@@ -2,4 +2,18 @@
     <string name="app_name">NanoGiantsChallenge</string>
     <string name="beerlist">Beerlist</string>
     <string name="beername">Beername</string>
+    <string name="search">Search</string>
+    <string name="share">Share</string>
+    <string name="name">Name</string>
+    <string name="tagline">Tagline</string>
+    <string name="first_brewing_date">First Brewing date</string>
+    <string name="_07_2020">07/2020</string>
+    <string name="description">Description:</string>
+    <string name="any_description_here">any description here</string>
+    <string name="food_pairings">Food Pairings:</string>
+    <string name="any_food_pairings_here">any food pairings here</string>
+    <string name="brewers_tips">Brewers Tips:</string>
+    <string name="any_tips_here">any tips here</string>
+    <string name="_3_5">3,5‰</string>
+    <string name="beer_image">Beer_image</string>
 </resources>

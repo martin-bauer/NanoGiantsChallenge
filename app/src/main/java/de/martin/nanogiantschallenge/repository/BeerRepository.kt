@@ -1,14 +1,23 @@
 package de.martin.nanogiantschallenge.repository
 
-import de.martin.nanogiantschallenge.api.model.Beer
-import de.martin.nanogiantschallenge.api.RetrofitInstance
+import dagger.hilt.android.scopes.ActivityScoped
+import de.martin.nanogiantschallenge.data.BeerApi
+import de.martin.nanogiantschallenge.data.model.Beer
+import javax.inject.Inject
 
-class BeerRepository {
-    suspend fun getBeers(): ArrayList<Beer> {
-        return RetrofitInstance.api.getBeers("50")
+@ActivityScoped
+class BeerRepository @Inject constructor(
+    private val api: BeerApi
+) {
+    suspend fun getBeers(page: String, per_page: String): ArrayList<Beer> {
+        return api.getBeers(page, per_page)
     }
 
-    suspend fun getBeer(id: Int): Beer {
-        return RetrofitInstance.api.getBeer(id)
+    suspend fun getBeer(name: String): Beer {
+        return api.getBeer(name)
+    }
+
+    suspend fun getRandomBeer(): Beer {
+        return api.getRandomBeer()
     }
 }
